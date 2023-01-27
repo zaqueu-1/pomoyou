@@ -5,9 +5,10 @@
 Pomodoro app with short and long breaks. I'll add more features soon!
 
 ## Demo
-![demo]()
+![demo](https://github.com/zaqueu-1/pomoyou/blob/main/chrome-capture-2023-0-26.gif)
 
 ## Deploy
+https://pomoyou.vercel.app/
 
 
 ## Roadmap
