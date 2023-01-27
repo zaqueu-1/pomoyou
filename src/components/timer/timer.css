@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 450px;
+}
+
+.mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    background-color: rgb(128, 128, 128, 0.15);
+    border-radius: 8px;
+}
+
+.mode-btn, .active {
+    font-size: .9rem;
+    padding: .4rem 0;
+    width: 135px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.4s;
+}
+
+.active {
+    background-color: rgb(128, 128, 128, 0.3);
+}
+
+.timer {
+    font-size: 7.5rem;
+    color: white;
+    text-shadow: 2px -2px rgb(111, 111, 111, .3);
+}
+
+button {
+    font-size: 1.2rem;
+    padding: .5rem;
+    width: 150px;
+    max-width: 150px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-weight: bold;
+    transition: all 0.1s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.icon {
+    font-size: .9rem;
+    margin-right: .3rem;
+}
+
+.start-color {
+    color: white;
+    background-color: rgb(147, 186, 165);
+    border-bottom: 5px solid rgb(116, 142, 128);
+    opacity: 0.8;
+}
+
+.pause-color {
+    color: white;
+    margin-top: .15rem;
+    background-color: rgb(180, 142, 142);
+    opacity: 0.8;
+}
