@@ -12,8 +12,8 @@ https://pomoyou.vercel.app/
 
 
 ## Roadmap
-- dark mode;
-- automatic mode;
+- dark mode [done];
+- automatic mode [done];
 - sound effects on keypress [done];
 - responsive mode for mobiles [done];
 

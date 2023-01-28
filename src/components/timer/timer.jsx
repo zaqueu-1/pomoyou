@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { useEffect } from 'react';
 import './timer.css'
 import { FaPause, FaPlay } from 'react-icons/fa'
@@ -31,19 +31,18 @@ function Timer() {
       }
 
       if (seconds === 0 && minutes === 0 && chosenMode !== 'pomodoro') {
-        clearInterval(timer);
         new Audio(finished).play();
-        setChosenMode('pomodoro')
-        setStart(false);
-        setMinutes(25);
-        setSeconds(0);
+        switchMode('pomodoro');
+        if (autoMode) {
+          setStart(true);
+        }
       } else if (seconds === 0 && minutes === 0 && chosenMode === 'pomodoro') {
         clearInterval(timer);
         new Audio(finished).play();
-        setChosenMode('short')
-        setStart(false);
-        setMinutes(5);
-        setSeconds(0);
+        switchMode('short');
+        if (autoMode) {
+          setStart(true);
+        }
       }
 
     }, 1000)
@@ -103,6 +102,24 @@ function Timer() {
     }
   }
 
+  const [darkBg, setDarkBg] = useState(false);
+
+  const darkModeToggle = (e) => {
+    setDarkBg(e.target.checked);
+
+    (!darkBg ? document.body.style.backgroundColor = "rgb(65, 65, 65)" : document.body.style.backgroundColor = "rgb(215, 215, 215)")
+  }
+
+  const [autoMode, setAutoMode] = useState(false);
+  const btnRef = useRef(null);
+
+  const autoModeToggle = (e) => {
+    setAutoMode(e.target.checked);
+
+    if (!autoMode && start) {
+      btnRef.current.click();
+    }
+  }
 
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -114,10 +131,21 @@ function Timer() {
             </div>
 
             <h1 className='timer'>{currentTimer}</h1>
-            <button className={start ? 'pause-color' : 'start-color'} onClick={handleTimer}>
+            <button ref={btnRef} className={start ? 'pause-color' : 'start-color'} onClick={handleTimer}>
               {start ? <FaPause className='icon'/> : <FaPlay className='icon'/>} 
               {start ? 'PAUSAR' : 'INICIAR'}
             </button>
+
+            <div className="tools-container">
+              <div className="tool">
+                <input type="checkbox" onChange={autoModeToggle} checked={autoMode}/>
+                <p>Modo automático</p>
+              </div>
+              <div className="tool">
+                <input type="checkbox" onChange={darkModeToggle} checked={darkBg}/>
+                <p>Modo escuro</p>
+              </div>
+            </div>
         </div>
     </div>
 
