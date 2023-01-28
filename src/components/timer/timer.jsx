@@ -87,8 +87,8 @@ function Timer() {
         setChosenMode('short')
         setClickSound(false);
         setStart(false);
-        setMinutes(0);
-        setSeconds(4);
+        setMinutes(5);
+        setSeconds(0);
         break;
       case 'long':
         clearInterval(timer);
