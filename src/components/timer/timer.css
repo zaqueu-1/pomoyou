@@ -71,3 +71,55 @@ button:hover {
     background-color: rgb(180, 142, 142);
     opacity: 0.8;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 1rem;
+        margin-top: 1rem;
+        max-width: 300px;
+    }
+    
+    .mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .2rem;
+        background-color: rgb(128, 128, 128, 0.15);
+        border-radius: 8px;
+    }
+    
+    .mode-btn, .active {
+        font-size: .85rem;
+        width: 95px;
+    }
+    
+    
+    .timer {
+        font-size: 6.5rem;
+    }
+    
+    button {
+        font-size: 1.1rem;
+        padding: .4rem;
+        width: 130px;
+        max-width: 130px;
+    }
+    
+    .icon {
+        font-size: .8rem;
+    }
+    
+    .start-color {
+        color: white;
+        background-color: rgb(147, 186, 165);
+        border-bottom: 5px solid rgb(116, 142, 128);
+        opacity: 0.8;
+    }
+    
+    .pause-color {
+        color: white;
+        margin-top: .15rem;
+        background-color: rgb(180, 142, 142);
+        opacity: 0.8;
+    }
+}

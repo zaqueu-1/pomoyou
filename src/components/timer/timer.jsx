@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import { useEffect } from 'react';
 import './timer.css'
 import { FaPause, FaPlay } from 'react-icons/fa'
+import click from '../../sounds/click.wav'
+import pullClick from '../../sounds/pullClick.wav'
+import finished from '../../sounds/finished.wav'
 
 function Timer() {
 
@@ -9,17 +12,17 @@ function Timer() {
   const [minutes, setMinutes] = useState(25)
   const [start, setStart] = useState(false)
   const [chosenMode, setChosenMode] = useState('pomodoro')
-  var timer;
+  let timer;
   let currentTimer = (minutes<10?'0'+minutes:minutes)+':'+(seconds<10?'0'+seconds:seconds);
 
   useEffect(() => {
-    document.title = currentTimer;
+    document.title = currentTimer+' | Pomo-you';
   },[currentTimer])
 
   useEffect(() => {
 
     if (start) {
-    timer = setInterval(() => {
+    let timer = setInterval(() => {
       setSeconds(seconds => seconds - 1);
         
       if (seconds === 0 && minutes > 0) {
@@ -27,14 +30,16 @@ function Timer() {
         setSeconds(59);
       }
 
-      if (seconds === 0 && minutes === 0 && chosenMode != 'pomodoro') {
+      if (seconds === 0 && minutes === 0 && chosenMode !== 'pomodoro') {
         clearInterval(timer);
+        new Audio(finished).play();
         setChosenMode('pomodoro')
         setStart(false);
         setMinutes(25);
         setSeconds(0);
       } else if (seconds === 0 && minutes === 0 && chosenMode === 'pomodoro') {
         clearInterval(timer);
+        new Audio(finished).play();
         setChosenMode('short')
         setStart(false);
         setMinutes(5);
@@ -47,8 +52,18 @@ function Timer() {
   }
 })
 
+  const [clickSound, setClickSound] = useState(false)
+
   const handleTimer = () => {
     setStart(true);
+
+    if (!clickSound) {
+    new Audio(click).play();
+    setClickSound(true);
+    } else if (clickSound) {
+      new Audio(pullClick).play();
+      setClickSound(false);
+    }
 
     if(start) {
       clearInterval(timer);
@@ -62,6 +77,7 @@ function Timer() {
       case 'pomodoro':
         clearInterval(timer);
         setChosenMode('pomodoro')
+        setClickSound(false);
         setStart(false);
         setMinutes(25);
         setSeconds(0);
@@ -69,13 +85,15 @@ function Timer() {
       case 'short':
         clearInterval(timer);
         setChosenMode('short')
+        setClickSound(false);
         setStart(false);
-        setMinutes(5);
-        setSeconds(0);
+        setMinutes(0);
+        setSeconds(4);
         break;
       case 'long':
         clearInterval(timer);
         setChosenMode('long')
+        setClickSound(false);
         setStart(false);
         setMinutes(15);
         setSeconds(0);

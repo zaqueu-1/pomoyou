@@ -1,6 +1,5 @@
 import Header from './components/header/header';
 import Timer from './components/timer/timer';
-import Footer from './components/footer/footer';
 import './app.css'
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
       <Header />
       <Timer />
-      <Footer />
     </div>
   );
 }

@@ -48,3 +48,19 @@
 .linkedin {
     font-size: 2rem;
 }
+
+@media only screen and (max-width:600px) {
+    .header-container {
+        padding: 1rem 1rem .5rem 1rem;
+        width: 90%;
+    }
+
+    .social {
+        width: 40%;
+        margin-right: -.5rem;
+    }
+
+    .social-btn {
+        font-size: 1.4rem;
+    }
+}
