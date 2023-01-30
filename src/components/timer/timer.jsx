@@ -142,7 +142,7 @@ function Timer() {
 
             <div className="mode" style={{marginTop: '.5rem', marginBottom: '0'}}>
               <button className={chosenMode === 'custom' ? 'active-input' : 'input-btn'} onClick={() => switchMode('custom')}>
-                YOU: <input class='numberInput' type='number' value={customMinutes} onChange={(e) => setCustomMinutes(e.target.value)}></input></button>
+                YOU: <input class='numberInput' type='number' value={customMinutes} min='0' onChange={(e) => setCustomMinutes(e.target.value)}></input></button>
             </div>
 
             <h1 className='timer'>{currentTimer}</h1>
