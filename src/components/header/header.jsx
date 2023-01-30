@@ -22,7 +22,7 @@ function Header() {
     <div style={{display: 'flex', justifyContent: 'center'}}>
         <div className='header-container'>
             <div className='title'>
-                <h1>Pomo-You</h1>
+                <h1>Pomo-You</h1><h4>seu pomodoro minimalista</h4>
             </div>
 
             <div className='social'>

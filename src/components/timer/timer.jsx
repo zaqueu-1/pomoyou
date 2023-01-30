@@ -97,6 +97,14 @@ function Timer() {
         setMinutes(15);
         setSeconds(0);
         break;
+      case 'custom':
+        clearInterval(timer);
+        setChosenMode('custom')
+        setClickSound(false);
+        setStart(false);
+        setMinutes(customMinutes);
+        setSeconds(0);
+        break;
       default:
         break;
     }
@@ -121,6 +129,8 @@ function Timer() {
     }
   }
 
+  const [customMinutes, setCustomMinutes] = useState(0)
+
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
         <div className='container'>
@@ -128,6 +138,11 @@ function Timer() {
               <button className={chosenMode === 'pomodoro' ? 'active' : 'mode-btn'} onClick={() => switchMode('pomodoro')}>POMODORO</button>
               <button className={chosenMode === 'short' ? 'active' : 'mode-btn'} onClick={() => switchMode('short')}>CURTO</button>
               <button className={chosenMode === 'long' ? 'active' : 'mode-btn'} onClick={() => switchMode('long')}>LONGO</button>
+            </div>
+
+            <div className="mode" style={{marginTop: '.5rem', marginBottom: '0'}}>
+              <button className={chosenMode === 'custom' ? 'active-input' : 'input-btn'} onClick={() => switchMode('custom')}>
+                YOU: <input class='numberInput' type='number' value={customMinutes} onChange={(e) => setCustomMinutes(e.target.value)}></input></button>
             </div>
 
             <h1 className='timer'>{currentTimer}</h1>
@@ -138,7 +153,7 @@ function Timer() {
 
             <div className="tools-container">
               <div className="tool">
-                <input type="checkbox" onChange={autoModeToggle} checked={autoMode}/>
+                <input type="checkbox" disabled={chosenMode === 'custom' ? true : false} onChange={autoModeToggle} checked={autoMode}/>
                 <p>Modo automático</p>
               </div>
               <div className="tool">

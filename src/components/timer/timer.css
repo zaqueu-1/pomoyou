@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 450px;
 }
 
@@ -17,7 +17,7 @@
     border-radius: 8px;
 }
 
-.mode-btn, .active {
+.mode-btn, .active, .input-btn, .active-input {
     font-size: .9rem;
     padding: .4rem 0;
     width: 135px;
@@ -26,12 +26,33 @@
     cursor: pointer;
     font-weight: bold;
     transition: all 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px rgb(111, 111, 111, .3);
+}
+
+.active, .active-input {
+    background-color: rgb(128, 128, 128, 0.4);
+}
+
+.numberInput {
+    width: 40px;
+    height: 23px;
+    padding: 0 0 0 .4rem;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid transparent;
+    margin-left: .5rem;
+    color: whitesmoke;
+    border: 1px solid rgb(245, 245, 245, 0.8);
+    background-color: rgb(128, 128, 128, 0.4);
 }
 
 .tools-container {
     display: flex;
     flex-direction: column;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     justify-content: center;
     background-color: rgb(128, 128, 128, 0.15);
     border-radius: 8px;
@@ -48,12 +69,9 @@ p {
     color: white;
     text-transform: uppercase;
     margin-left: .5rem;
-    text-shadow: 2px -2px rgb(111, 111, 111, .3);
+    text-shadow: 2px 2px rgb(111, 111, 111, .3);
 }
 
-.active {
-    background-color: rgb(128, 128, 128, 0.3);
-}
 
 .timer {
     font-size: 7.5rem;
