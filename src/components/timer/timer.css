@@ -124,30 +124,32 @@ button:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: .2rem;
+        gap: .1rem;
         background-color: rgb(128, 128, 128, 0.15);
         border-radius: 8px;
     }
     
-    .mode-btn, .active {
-        font-size: .85rem;
+    .mode-btn, .active, .input-btn, .active-input {
+        font-size: .65rem;
         width: 95px;
     }
-    
+    .numberInput {
+        height: 20px;
+    }
     
     .timer {
-        font-size: 6.5rem;
+        font-size: 6rem;
     }
     
     button {
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: .4rem;
-        width: 130px;
+        width: 120px;
         max-width: 130px;
     }
     
     .icon {
-        font-size: .8rem;
+        font-size: .7rem;
     }
     
     .start-color {
@@ -162,5 +164,9 @@ button:hover {
         margin-top: .15rem;
         background-color: rgb(180, 142, 142);
         opacity: 0.8;
+    }
+
+    .tool {
+        font-size: .8rem;
     }
 }

@@ -55,7 +55,7 @@
     font-size: 2rem;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:599px) {
     .header-container {
         padding: 1rem 1rem .5rem 1rem;
         width: 90%;
@@ -75,6 +75,27 @@
     }
     
     .title h4 {
-        font-size: .7rem;
+        display: none;
     }
+}
+
+@media only screen and (max-width:899px) {
+    .header-container {
+        padding: 1rem 1rem .5rem 1rem;
+        width: 90%;
+    }
+
+    .social {
+        width: 40%;
+        margin-right: -.5rem;
+    }
+
+    .social-btn {
+        font-size: 1.4rem;
+    }
+
+    .title h1 {
+        font-size: 1.3rem;
+    }
+    
 }
