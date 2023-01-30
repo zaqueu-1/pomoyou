@@ -115,7 +115,7 @@ function Timer() {
   const darkModeToggle = (e) => {
     setDarkBg(e.target.checked);
 
-    (!darkBg ? document.body.style.backgroundColor = "rgb(65, 65, 65)" : document.body.style.backgroundColor = "rgb(215, 215, 215)")
+    (!darkBg ? document.body.style.backgroundColor = "rgb(65, 65, 65)" : document.body.style.backgroundColor = "rgb(205, 205, 215)")
   }
 
   const [autoMode, setAutoMode] = useState(false);

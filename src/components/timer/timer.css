@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-shadow: 2px 2px rgb(111, 111, 111, .3);
+    text-shadow: 1px 1px rgb(111, 111, 111, .3);
 }
 
 .active, .active-input {
@@ -69,7 +69,7 @@ p {
     color: white;
     text-transform: uppercase;
     margin-left: .5rem;
-    text-shadow: 2px 2px rgb(111, 111, 111, .3);
+    text-shadow: 1px 1px rgb(111, 111, 111, .3);
 }
 
 
