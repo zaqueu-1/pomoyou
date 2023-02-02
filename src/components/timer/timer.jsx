@@ -5,6 +5,9 @@ import { FaPause, FaPlay } from 'react-icons/fa'
 import click from '../../sounds/click.wav'
 import pullClick from '../../sounds/pullClick.wav'
 import finished from '../../sounds/finished.wav'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Timer() {
 
@@ -30,8 +33,10 @@ function Timer() {
         setSeconds(59);
       }
 
-      if (seconds === 0 && minutes === 0 && chosenMode !== 'pomodoro') {
+      if (seconds === 0 && minutes === 0 && chosenMode !== 'pomodoro' && chosenMode !== 'custom') {
+        clearInterval(timer);
         new Audio(finished).play();
+        toast.warn('Foco!', {theme:(darkBg?'dark':'light')})
         switchMode('pomodoro');
         if (autoMode) {
           setStart(true);
@@ -39,7 +44,19 @@ function Timer() {
       } else if (seconds === 0 && minutes === 0 && chosenMode === 'pomodoro') {
         clearInterval(timer);
         new Audio(finished).play();
+        toast.info('Descanso!', {theme:(darkBg?'dark':'light')})
         switchMode('short');
+        if (autoMode) {
+          setStart(true);
+        }
+      } else if (seconds === 0 && minutes === 0 && chosenMode === 'custom') {
+        clearInterval(timer);
+        new Audio(finished).play();
+        toast.success('Concluído!', {theme:(darkBg?'dark':'light')})
+        setClickSound(false);
+        setMinutes(customMinutes);
+        setSeconds(0);
+        setStart(false);
         if (autoMode) {
           setStart(true);
         }
@@ -129,7 +146,7 @@ function Timer() {
     }
   }
 
-  const [customMinutes, setCustomMinutes] = useState(0)
+  const [customMinutes, setCustomMinutes] = useState(0);
 
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -153,7 +170,7 @@ function Timer() {
 
             <div className="tools-container">
               <div className="tool">
-                <input type="checkbox" disabled={chosenMode === 'custom' ? true : false} onChange={autoModeToggle} checked={autoMode}/>
+                <input type="checkbox" onChange={autoModeToggle} checked={autoMode}/>
                 <p>Modo automático</p>
               </div>
               <div className="tool">
