@@ -1,4 +1,4 @@
-<img src="https://media.discordapp.net/attachments/1032819189288816690/1080119502865444884/logo.png" alt="logo">
+<img src="https://github.com/zaqueu-1/pomoyou/blob/main/github/logo.png?raw=true" alt="logo">
 
 ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
@@ -11,7 +11,7 @@ Nada por enquanto! Tudo que eu queria foi adicionado.
 https://pomoyou.vercel.app/
 
 ## 🖼️ Demonstração
-![demo](https://github.com/zaqueu-1/memo/blob/main/github/memo-demo.gif)
+![demo](https://github.com/zaqueu-1/pomoyou/blob/main/github/pomodoro.gif?raw=true)
 
 ## ✍️ Sobre o autor
 Desenvolvedor front-end, 27 anos, Rio de Janeiro/RJ
