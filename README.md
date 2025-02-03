@@ -4,7 +4,7 @@
 
 # Pomo-you 🍅
 
->A modern and customizable Pomodoro timer application built with React.js to help you boost your productivity.
+> A modern and customizable Pomodoro timer application built with React.js to help you boost your productivity.
 
 ## Deploy 🚀
 
@@ -26,22 +26,32 @@ https://pomoyou.vercel.app/
 - **User-Friendly Interface:**
 
   - Clean and intuitive design
-  - Dark/Light mode toggle
+  - Dark/Light mode toggle (persisted in localStorage)
   - Automatic mode for continuous work sessions
   - Visual and audio notifications
+
+- **Internationalization:**
+
+  - Available in English and Portuguese
+  - Language preference saved in localStorage
+  - Easy to add new languages
+  - Automatic language detection based on browser settings
 
 - **Additional Features:**
   - Browser tab title updates with current timer
   - Toast notifications for session changes
   - Sound effects for better interaction
   - Responsive design
+  - User preferences persistence (theme and language)
 
 ## Technologies Used
 
 - React.js
 - React Icons
 - React Toastify
+- i18next for internationalization
 - CSS for styling
+- LocalStorage for user preferences
 
 ## Getting Started
 
@@ -120,6 +130,15 @@ Note: The production environment runs on port 3001 to avoid conflicts with the d
 3. Use the PAUSE button to pause if needed
 4. Toggle automatic mode to automatically start the next session
 5. Switch between dark and light modes for comfortable viewing
+6. Change language using the flag buttons (🇺🇸/🇧🇷)
+
+## User Preferences
+
+The application saves your preferences locally:
+
+- **Theme**: Your choice of dark/light mode is remembered
+- **Language**: Your preferred language (English/Portuguese) is saved
+- These settings persist even after closing the browser
 
 ## Contributing
 

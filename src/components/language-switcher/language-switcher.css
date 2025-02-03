@@ -1,0 +1,28 @@
+.language-switcher {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.language-switcher button {
+  background: transparent;
+  border-radius: 4px;
+  padding: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  opacity: .5;
+}
+
+.language-switcher button:hover {
+  transform: scale(1.1);
+}
+
+.language-switcher button.active {
+  opacity: 1 ;
+}

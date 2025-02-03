@@ -1,0 +1,25 @@
+{
+  "modes": {
+    "pomodoro": "POMODORO",
+    "short": "CURTO",
+    "long": "LONGO",
+    "custom": "VOCÊ"
+  },
+  "buttons": {
+    "start": "INICIAR",
+    "pause": "PAUSAR"
+  },
+  "settings": {
+    "darkMode": "Modo escuro",
+    "autoMode": "Modo automático"
+  },
+  "notifications": {
+    "focus": "Foco!",
+    "break": "Hora do descanso!",
+    "completed": "Concluído!"
+  },
+  "header": {
+    "title": "Pomo-You",
+    "subtitle": "seu pomodoro minimalista"
+  }
+}
