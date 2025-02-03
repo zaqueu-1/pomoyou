@@ -68,7 +68,7 @@ https://pomoyou.vercel.app/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/pomoyou.git
+git clone https://github.com/zaqueu-1/pomoyou.git
 cd pomoyou
 ```
 
@@ -95,7 +95,7 @@ yarn start
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/pomoyou.git
+git clone https://github.com/zaqueu-1/pomoyou.git
 cd pomoyou
 ```
 
