@@ -2,31 +2,135 @@
 
 ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-> Pomo-You é um cronômetro Pomodoro mionimalista, eficaz e direto ao ponto. Conta com avisos sonoros, modo automático, modo escuro e opção de timer customizado. Desenvolvido inteiramente em ReactJS.
+# Pomo-you 🍅
 
-## 🛠️ Ajustes e melhorias
-Nada por enquanto! Tudo que eu queria foi adicionado. 
+>A modern and customizable Pomodoro timer application built with React.js to help you boost your productivity.
 
-## 🚀 Deploy
+## Deploy 🚀
+
 https://pomoyou.vercel.app/
 
-## 🖼️ Demonstração
+## Demo 🖼️
+
 ![demo](https://github.com/zaqueu-1/pomoyou/blob/main/github/pomodoro.gif?raw=true)
 
-## ✍️ Sobre o autor
-Desenvolvedor front-end, 27 anos, Rio de Janeiro/RJ
+## Features
 
-Apaixonado por compartilhar conhecimento, já atuei como professor, ministrei workshops e fui designer. Essas experiências se converteram em habilidades interpessoais e me tornaram uma pessoa mais habilidosa em compreender o próximo e solucionar problemas com maestria.
+- **Multiple Timer Modes:**
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="#">
-        <img src="https://media.discordapp.net/attachments/1032819189288816690/1080117613121765406/avatar_def-small.png?width=651&height=651" width="100px;" alt="foto"/><br>
-        <sub>
-          <b><a href="https://zaqueu.tech">Eduardo Zaqueu</a></b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+  - Pomodoro (25 minutes)
+  - Short Break (5 minutes)
+  - Long Break (15 minutes)
+  - Custom Timer (set your own duration)
+
+- **User-Friendly Interface:**
+
+  - Clean and intuitive design
+  - Dark/Light mode toggle
+  - Automatic mode for continuous work sessions
+  - Visual and audio notifications
+
+- **Additional Features:**
+  - Browser tab title updates with current timer
+  - Toast notifications for session changes
+  - Sound effects for better interaction
+  - Responsive design
+
+## Technologies Used
+
+- React.js
+- React Icons
+- React Toastify
+- CSS for styling
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v12 or higher)
+- npm or yarn
+- Docker and Docker Compose (optional)
+
+### Installation
+
+#### Option 1: Local Development
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/pomoyou.git
+cd pomoyou
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+#### Option 2: Using Docker
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/pomoyou.git
+cd pomoyou
+```
+
+2. For development:
+
+```bash
+docker-compose up dev
+```
+
+Access the application at http://localhost:3000
+
+3. For production:
+
+```bash
+docker-compose up prod
+```
+
+Access the application at http://localhost:3001
+
+Note: The production environment runs on port 3001 to avoid conflicts with the development environment.
+
+## Usage
+
+1. Select your desired timer mode:
+
+   - POMODORO: 25-minute work session
+   - CURTO (Short): 5-minute break
+   - LONGO (Long): 15-minute break
+   - YOU: Custom duration (set your own minutes)
+
+2. Click the START button to begin the timer
+3. Use the PAUSE button to pause if needed
+4. Toggle automatic mode to automatically start the next session
+5. Switch between dark and light modes for comfortable viewing
+
+## Contributing
+
+Contributions are welcome! Feel free to submit issues and pull requests.
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Acknowledgments
+
+- Inspired by the Pomodoro Technique® developed by Francesco Cirillo
+- Built with modern React.js practices
+- Designed for productivity enthusiasts
